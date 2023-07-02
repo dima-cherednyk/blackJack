@@ -1,27 +1,17 @@
 import React from 'react';
+import { RegisterNewUser } from './components/RegisterNewUser/RegisterNewUser';
+import { useAppSelector } from './app/hooks';
+import { GamePage } from './components/GamePage/GamePage';
 import './App.scss';
 
-interface Props {
-  onClick: () => void;
-}
-
-export const Provider: React.FC<Props> = React.memo(
-  ({ onClick, children }) => (
-    <button
-      type="button"
-      onClick={onClick}
-    >
-      {children}
-    </button>
-  ),
-);
-
 export const App: React.FC = () => {
+  const { actualUser } = useAppSelector(state => state.actualUser);
+
   return (
-    <div className="starter">
-      <Provider onClick={() => ({})}>
-        <TodoList />
-      </Provider>
+    <div className="app">
+      {!actualUser
+        ? <RegisterNewUser />
+        : <GamePage />}
     </div>
   );
 };

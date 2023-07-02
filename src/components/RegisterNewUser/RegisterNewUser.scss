@@ -1,0 +1,14 @@
+.registerNewUser {
+  padding-top: 150px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  width: 500px;
+  position: relative;
+
+  &__notification {
+    position: absolute;
+    bottom: -100px;
+  }
+}
