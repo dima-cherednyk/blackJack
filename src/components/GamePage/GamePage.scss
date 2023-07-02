@@ -1,0 +1,57 @@
+.gamePage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 800px;
+  height: 100vh;
+  width: 100vw;
+  color: aliceblue;
+  background-image: url('./background.jpg');
+
+  &__title {
+    font-weight: 700;
+    font-size: 52px;
+    margin-bottom: 10px;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 5px;
+  }
+
+  &__button {
+    width: 140px;
+    height: 50px;
+  }
+
+  &__text {
+    font-size: 24px;
+  }
+
+  &__deal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__notification {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    position: absolute;
+    z-index: 1;
+    width: 500px;
+    height: 200px;
+  }
+}

@@ -1,0 +1,35 @@
+.dealerCards {
+  &__text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 28px;
+  }
+
+  &__cards {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__card {
+    height: 230px;
+    width: 150px;
+    position: relative;
+
+    animation-name: move;
+    animation-duration: 300ms;
+    animation-timing-function: ease-in-out;
+
+    @keyframes move {
+      from {
+        opacity: 0;
+        left: 500px;
+      }
+      
+      to {
+        opacity: 1;
+        left: 0;
+      }
+    }
+  }
+}

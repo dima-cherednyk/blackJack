@@ -1,0 +1,44 @@
+.bets {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  &__bet {
+    font-size: 21px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 10px;
+  }
+
+  &__chips {
+    display: flex;
+    gap: 15px;
+  }
+
+  &__chip {
+    background-size: cover;
+    background-position: center;
+    height: 90px;
+    width: 90px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+
+    &--1 {
+      background-image: url(../Bets/chips/pink.png);
+    }
+
+    &--10 {
+      background-image: url(../Bets/chips/red.png);
+    }
+
+    &--100 {
+      background-image: url(../Bets/chips/purple.png);
+    }
+
+    &--500 {
+      background-image: url(../Bets/chips/blue.png);
+    }
+  }
+}
